@@ -67,7 +67,7 @@ def DLO(SearchAgents_no, Tmax, ub, lb, dim, fobj):
                 selected_searchAgent = Individual_Best_Positions[m, :].copy()
 
                 p = np.random.random()
-                if p < 0.3:
+                if p < 0.2:
                     Positions_NEW[i, :] = (Global_Best_position + levy_flight(dim) *
                                            (Global_Best_position - selected_searchAgent))
                 else:
